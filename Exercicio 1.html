@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Conteúdo com JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(209, 75, 124);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 300px;
+        }
+        h1 {
+            color: pink;
+            font-size: 2em;
+            margin: 0 0 10px;
+        }
+        p {
+            color: pink;
+            font-size: 1.2em;
+            margin: 0 0 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(230, 164, 175);
+            color: rgb(213, 72, 96);
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: pink;
+        }
+
+        /* Ajustes de responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p, button {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            p, button {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Oláaaaa</h1>
+        <p id="minhaDiv">Clique no Botão.</p>
+        <button onclick="alterarConteudo()">Botão (clica em mim)</button>
+    </div>
+
+    <script>
+        function alterarConteudo() {
+            document.getElementById("minhaDiv").innerHTML = "<strong>Você clicou no botão :)</strong>"; //strong
+        }
+    </script>
+</body>
+</html>
